@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pluto Coffee</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .card-hover:hover {
+        transform: translateY(-5px);
+        transition: transform 0.3s ease;
+      }
+
+      .bg-brown-800 {
+        background-color: #4a3728;
+      }
+
+      .bg-brown-700 {
+        background-color: #5c4636;
+      }
+
+      .bg-brown-600 {
+        background-color: #8c6a4e;
+      }
+
+      .text-brown-800 {
+        color: #4a3728;
+      }
+
+      .text-gray-placeholder {
+        color: #d3d3d3;
+      }
+
+      .hero-bg {
+        background-image: url("https://via.placeholder.com/1200x600");
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+
+  <body class="font-inter bg-brown-700 text-white">
+    <!-- Navbar -->
+    <header
+      id="navbar"
+      class="fixed top-0 left-0 w-full z-50 transition-all bg-brown-800"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="text-white font-bold text-xl">Pluto Coffee</div>
+        <nav class="hidden md:flex space-x-6 text-white font-medium">
+          <a href="#home" class="hover:text-yellow-300 transition">Home</a>
+          <a href="#product" class="hover:text-yellow-300 transition"
+            >Product</a
+          >
+          <a href="#why" class="hover:text-yellow-300 transition">Why Us</a>
+          <a href="#testimonials" class="hover:text-yellow-300 transition"
+            >Testimonials</a
+          >
+        </nav>
+        <button id="menuToggle" class="md:hidden text-white focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path id="menuIcon" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="md:hidden hidden bg-brown-800 px-6 py-4">
+        <a href="#home" class="block text-white py-2">Home</a>
+        <a href="#product" class="block text-white py-2">Product</a>
+        <a href="#why" class="block text-white py-2">Why Us</a>
+        <a href="#testimonials" class="block text-white py-2">Testimonials</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative" id="home">
+      <img
+        src="assets/img/Hero Image.jpeg"
+        alt="Coffee Cup"
+        class="w-full h-[500px] object-cover"
+      />
+      <div class="absolute inset-0 flex items-center px-6 sm:px-16">
+        <div>
+          <h2
+            class="text-white text-3xl sm:text-5xl font-extrabold leading-tight"
+          >
+            Savor the<br />Perfect Brew!
+          </h2>
+          <p class="text-white mt-3 mb-6">Lorem Ipsum</p>
+          <button
+            class="bg-white text-[#6A4E42] font-semibold px-6 py-2 rounded-full hover:bg-gray-200 transition"
+          >
+            Explore Now
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Section -->
+    <section class="bg-[#6A4E42] py-16 px-6 sm:px-16" id="product">
+      <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+          Our Signature Drinks
+        </h2>
+        <p class="text-[#F5EBDD] mb-12 max-w-2xl mx-auto">
+          Nikmati racikan kopi khas kami yang dibuat dengan cinta dan biji kopi
+          terbaik.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Product Card -->
+          <div
+            class="bg-[#F5EBDD] p-6 rounded-xl shadow-md text-[#4B2E26] text-center hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="assets/img/Espresso.jpg"
+              alt="Espresso"
+              class="mx-auto mb-4 rounded-lg"
+            />
+            <h3 class="text-xl font-semibold mb-1">Espresso</h3>
+            <p class="text-sm text-[#6B4A3D] mb-4">
+              Kopi hitam pekat untuk penikmat sejati.
+            </p>
+            <button
+              onclick="alert('Espresso ordered!')"
+              class="bg-[#6A4E42] text-white px-4 py-2 rounded-lg hover:bg-[#4B2E26] transition"
+            >
+              Order
+            </button>
+          </div>
+
+          <!-- Repeat for other products -->
+          <div
+            class="bg-[#F5EBDD] p-6 rounded-xl shadow-md text-[#4B2E26] text-center hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="assets/img/Dalgona.jpg"
+              alt="Latte"
+              class="mx-auto mb-4 rounded-lg"
+            />
+            <h3 class="text-xl font-semibold mb-1">Latte</h3>
+            <p class="text-sm text-[#6B4A3D] mb-4">
+              Perpaduan espresso dan susu lembut.
+            </p>
+            <button
+              onclick="alert('Latte ordered!')"
+              class="bg-[#6A4E42] text-white px-4 py-2 rounded-lg hover:bg-[#4B2E26] transition"
+            >
+              Order
+            </button>
+          </div>
+
+          <div
+            class="bg-[#F5EBDD] p-6 rounded-xl shadow-md text-[#4B2E26] text-center hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="assets/img/Cappucino.jpg"
+              alt="Cappuccino"
+              class="mx-auto mb-4 rounded-lg"
+            />
+            <h3 class="text-xl font-semibold mb-1">Cappuccino</h3>
+            <p class="text-sm text-[#6B4A3D] mb-4">
+              Espresso, susu & foam dalam harmoni rasa.
+            </p>
+            <button
+              onclick="alert('Cappuccino ordered!')"
+              class="bg-[#6A4E42] text-white px-4 py-2 rounded-lg hover:bg-[#4B2E26] transition"
+            >
+              Order
+            </button>
+          </div>
+
+          <div
+            class="bg-[#F5EBDD] p-6 rounded-xl shadow-md text-[#4B2E26] text-center hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="assets/img/Americano.jpg"
+              alt="Cold Brew"
+              class="mx-auto mb-4 rounded-lg"
+            />
+            <h3 class="text-xl font-semibold mb-1">Cold Brew</h3>
+            <p class="text-sm text-[#6B4A3D] mb-4">
+              Diseduh dingin, rasa smooth dan segar.
+            </p>
+            <button
+              onclick="alert('Cold Brew ordered!')"
+              class="bg-[#6A4E42] text-white px-4 py-2 rounded-lg hover:bg-[#4B2E26] transition"
+            >
+              Order
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="bg-white py-16 px-6 sm:px-16" id="why">
+      <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#6A4E42] mb-4">
+          Why Choose Us
+        </h2>
+        <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
+          Kami menyajikan kopi berkualitas terbaik dengan pelayanan yang ramah
+          dan suasana yang nyaman.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-10">
+          <!-- Card 1 -->
+          <div class="flex flex-col items-center text-center">
+            <img
+              src="https://img.icons8.com/ios-filled/100/6A4E42/coffee.png"
+              alt="Premium Beans"
+              class="w-16 h-16 mb-4"
+            />
+            <h3 class="text-xl font-semibold text-[#6A4E42] mb-2">
+              Premium Beans
+            </h3>
+            <p class="text-gray-600">
+              Biji kopi pilihan dari perkebunan terbaik untuk rasa yang otentik.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="flex flex-col items-center text-center">
+            <img
+              src="https://img.icons8.com/?size=100&id=5Xhtdu62rhCZ&format=png&color=000000"
+              alt="Experienced Barista"
+              class="w-16 h-16 mb-4"
+            />
+            <h3 class="text-xl font-semibold text-[#6A4E42] mb-2">
+              Experienced Barista
+            </h3>
+            <p class="text-gray-600">
+              Tim barista profesional dengan keahlian dalam menyeduh kopi yang
+              sempurna.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="flex flex-col items-center text-center">
+            <img
+              src="https://img.icons8.com/ios-filled/100/6A4E42/coffee-to-go.png"
+              alt="Cozy Atmosphere"
+              class="w-16 h-16 mb-4"
+            />
+            <h3 class="text-xl font-semibold text-[#6A4E42] mb-2">
+              Cozy Atmosphere
+            </h3>
+            <p class="text-gray-600">
+              Suasana nyaman untuk menikmati kopi, bekerja, atau bersantai.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Morning Happy Hours & Testimonials -->
+    <section class="py-16 bg-brown-700" id="testimonials">
+      <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Morning Happy Hours -->
+        <div class="bg-brown-800 p-6 rounded-2xl text-center shadow-md">
+          <h2 class="text-2xl font-bold mb-3">☀️ Morning Happy Hours</h2>
+          <p class="text-gray-placeholder mb-5 text-sm">
+            Diskon spesial hanya di pagi hari!
+          </p>
+          <div class="bg-brown-600 p-5 rounded-xl inline-block shadow-inner">
+            <h3 class="text-xl font-semibold text-brown-800">View Today</h3>
+            <p class="text-2xl font-bold text-brown-800">$200</p>
+            <button
+              class="mt-3 bg-white text-brown-800 font-semibold py-1.5 px-6 rounded-full hover:bg-gray-200 transition"
+              onclick="alert('Order placed for $200!')"
+            >
+              Order Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Customer Testimonials -->
+        <div class="bg-brown-800 p-6 rounded-2xl text-center shadow-md">
+          <h2 class="text-2xl font-bold mb-3">💬 What They Say</h2>
+          <p class="text-gray-placeholder mb-4 text-sm">
+            Testimoni pelanggan kami
+          </p>
+          <img
+            src="assets/img/Testimonial.jpg"
+            alt="Customer Avatar"
+            class="mx-auto mb-3 rounded-full border-2 border-brown-600"
+          />
+          <p class="text-sm italic text-gray-300">
+            "Kopi di sini enak banget, suasananya cozy banget!"
+          </p>
+          <p class="mt-2 font-semibold text-white">– Sarah A.</p>
+        </div>
+
+        <!-- Pluto Coffee Brand Card -->
+        <div class="bg-brown-800 p-6 rounded-2xl text-center shadow-md">
+          <h3 class="text-xl font-bold mb-3">☕ Pluto Coffee</h3>
+          <p class="text-gray-placeholder text-sm mb-5">
+            Follow us & stay caffeinated!
+          </p>
+          <div class="flex justify-center space-x-3">
+            <div class="w-9 h-9 bg-gray-placeholder rounded-full"></div>
+            <div class="w-9 h-9 bg-gray-placeholder rounded-full"></div>
+            <div class="w-9 h-9 bg-gray-placeholder rounded-full"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brown-800 text-gray-200 py-12 mt-16">
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8"
+      >
+        <!-- Brand Info -->
+        <div>
+          <h2 class="text-2xl font-bold mb-3 text-white">Pluto Coffee</h2>
+          <p class="text-sm text-gray-400">
+            Tempat ngopi favoritmu yang selalu siap menemani pagi dan senja.
+            Rasakan ketenangan dalam setiap tegukan.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h3 class="text-lg font-semibold mb-3 text-white">Navigasi</h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="#" class="hover:underline hover:text-white">Beranda</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline hover:text-white">Produk</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline hover:text-white"
+                >Tentang Kami</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:underline hover:text-white">Kontak</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div>
+          <h3 class="text-lg font-semibold mb-3 text-white">Bantuan</h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="#" class="hover:underline hover:text-white">FAQ</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline hover:text-white"
+                >Kebijakan Privasi</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:underline hover:text-white"
+                >Syarat & Ketentuan</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div>
+          <h3 class="text-lg font-semibold mb-3 text-white">Ikuti Kami</h3>
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="w-9 h-9 flex items-center justify-center bg-brown-600 rounded-full hover:bg-brown-700 transition"
+            >
+              <svg
+                class="w-5 h-5 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M22 4.01a9.94 9.94 0 0 1-2.83.78 4.93 4.93 0 0 0 2.17-2.72 9.94 9.94 0 0 1-3.13 1.2A4.92 4.92 0 0 0 16.5 3c-2.7 0-4.9 2.2-4.9 4.9 0 .38.04.75.12 1.1A13.94 13.94 0 0 1 3 3.88a4.92 4.92 0 0 0 1.52 6.56 4.88 4.88 0 0 1-2.22-.61v.06c0 2.4 1.7 4.4 4 4.85a4.92 4.92 0 0 1-2.2.08 4.92 4.92 0 0 0 4.6 3.42 9.88 9.88 0 0 1-6.1 2.1c-.4 0-.8-.02-1.2-.07a13.92 13.92 0 0 0 7.56 2.21c9.07 0 14.03-7.51 14.03-14.03 0-.21 0-.43-.02-.64A10 10 0 0 0 22 4.01z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="w-9 h-9 flex items-center justify-center bg-brown-600 rounded-full hover:bg-brown-700 transition"
+            >
+              <svg
+                class="w-5 h-5 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 5 3.66 9.12 8.44 9.88v-6.99H7.9v-2.89h2.54V9.9c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.76-1.61 1.54v1.85h2.74l-.44 2.89h-2.3v6.99C18.34 21.12 22 17 22 12z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="w-9 h-9 flex items-center justify-center bg-brown-600 rounded-full hover:bg-brown-700 transition"
+            >
+              <svg
+                class="w-5 h-5 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2.04c-5.51 0-9.96 4.45-9.96 9.96 0 4.41 3.61 8.09 8.26 8.82v-6.24h-2.5V12h2.5v-1.7c0-2.48 1.49-3.86 3.77-3.86 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.76-1.61 1.54v1.85h2.74l-.44 2.89h-2.3v6.24C18.35 20.09 22 16.41 22 12c0-5.51-4.45-9.96-9.96-9.96z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Line -->
+      <div
+        class="mt-10 border-t border-brown-600 pt-4 text-center text-sm text-gray-500"
+      >
+        © 2025 Pluto Coffee. All rights reserved.
+      </div>
+    </footer>
+
+    <script>
+      // Sticky navbar with background change
+      window.addEventListener("scroll", () => {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("bg-brown-900", "shadow-lg");
+        } else {
+          navbar.classList.remove("bg-brown-900", "shadow-lg");
+        }
+      });
+
+      // Mobile menu toggle
+      const toggle = document.getElementById("menuToggle");
+      const menu = document.getElementById("mobileMenu");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        // Animate menu icon
+        const icon = document.getElementById("menuIcon");
+        if (menu.classList.contains("hidden")) {
+          icon.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+        } else {
+          icon.setAttribute("d", "M6 18L18 6M6 6l12 12"); // Cross icon
+        }
+      });
+
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const target = document.querySelector(link.getAttribute("href"));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 70, // adjust for sticky nav
+              behavior: "smooth",
+            });
+            menu.classList.add("hidden"); // hide mobile menu
+            document
+              .getElementById("menuIcon")
+              .setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+          }
+        });
+      });
+
+      // Modern order button feedback
+      document.querySelectorAll('button[onclick^="alert"]').forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          const text = btn.innerText || "Ordered!";
+          const snackbar = document.createElement("div");
+          snackbar.className =
+            "fixed bottom-6 right-6 bg-green-600 text-white px-4 py-2 rounded shadow-md animate-bounce";
+          snackbar.innerText = `${text} Success!`;
+          document.body.appendChild(snackbar);
+          setTimeout(() => {
+            snackbar.classList.add("opacity-0", "transition-opacity");
+            setTimeout(() => snackbar.remove(), 500);
+          }, 2000);
+        });
+      });
+    </script>
+  </body>
+</html>
