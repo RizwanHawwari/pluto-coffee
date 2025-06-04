@@ -29,9 +29,5 @@ Welcome to **Pluto Coffee** — a beautifully crafted website for a premium coff
 pluto-coffee/
 ├── index.html
 ├── assets/
-│   ├── css/
-│   │   └── styles.css
-│   ├── images/
-│   └── js/
-│       └── scripts.js
+│   ├── img/
 └── README.md
